@@ -6,25 +6,25 @@
     <title>Recipe Book</title>
     <style>
         body { font-family: Arial, sans-serif; }
-        #cook-mode { position: fixed; top: 10px; right: 10px; padding: 10px; background: #f8b400; color: white; border: none; cursor: pointer; }
+        .recipe-button {
+            display: block;
+            margin: 20px 0;
+            padding: 10px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .recipe-button:hover {
+            background: #45a049;
+        }
     </style>
 </head>
 <body>
     <h1>Recipe Book</h1>
-    <ul>
-        <li><a href="vegan-apple-maple-breakfast-sausage.html">Vegan Apple Maple Breakfast Sausage</a></li>
-    </ul>
-    <button id="cook-mode">Cook Mode</button>
-    <script>
-        document.getElementById('cook-mode').addEventListener('click', function() {
-            if (!document.fullscreenElement) {
-                document.documentElement.requestFullscreen();
-            } else {
-                if (document.exitFullscreen) {
-                    document.exitFullscreen();
-                }
-            }
-        });
-    </script>
+    <button class="recipe-button" onclick="location.href='vegan-apple-maple-breakfast-sausage.html'">Vegan Apple Maple Breakfast Sausage</button>
 </body>
 </html>
